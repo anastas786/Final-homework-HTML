@@ -1330,22 +1330,19 @@ outline-color: var(--accent-txt-cl);
 */
 
 .menu-toggle {
-/* display: flex;
+min-height: 32px;
+min-width: 22px;
+display: flex;
 align-items: center;
 justify-content: center;
-    top: 24px;
-    right: 24px;
-    margin-left: auto;
-    width: 24px;
-    height: 24px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    background: #E7E9FC;
-    border: 1px solid #2E2F42;
-   opacity: 0.1;
-  
-    transition: background-color var(--anim), fill var(--anim); */
+color: var(--navy-blue);
+margin: 0;
+padding: 0;
+background-color: transparent;
+cursor: pointer;
+border: none;
+border-radius: 50%;
+outline: none;
 }
  
 @media (min-width: 768px) {
