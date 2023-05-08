@@ -110,6 +110,10 @@ p {
   margin: -1px;
 }
 
+svg {
+  fill: currentColor;
+}
+
 .section{
   padding-top: 120px;
   padding-bottom: 120px;
@@ -207,7 +211,8 @@ max-width: 1158px;
 
 
 .header-web {
-margin-right: 76px;
+   margin-right: auto;
+
 font-family: "Raleway", sans-serif;
 font-weight: 800;
 font-size: 18px;
@@ -215,6 +220,18 @@ line-height: 1.17;
 letter-spacing: 0.03em;
 text-transform: uppercase;
 color: var(--accent-txt-cl);
+}
+
+@media only screen and (min-width: 768px) {
+  .header-web{
+  margin-right: 120px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .header-web {
+  margin-right: 76px;
+  }
 }
 
 .header-studio {
@@ -231,6 +248,7 @@ color: var(--accent-txt-cl);
   text-transform: uppercase;
 }
 
+
 .header {
 border-bottom: 1px solid #e7e9fc;
 box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -242,10 +260,23 @@ display:flex;
 align-items: center;
 }
 
+@media only screen and (max-width: 767px) {
+  .header-list {
+    display: none;
+  }
+}
+
 .header-nav{
  display:flex;
  align-items: center;
- margin-right: auto
+ margin-right: auto;
+/* padding: 24px 0; */
+}
+
+@media only screen and (max-width: 428px) {
+  .header-nav {
+    padding: 24px 0;
+  }
 }
 
 .header-link {
@@ -292,10 +323,26 @@ background-color: var(--navi-focus-cl);
 }
 
 .adress {
-display: flex;
-gap: 40px;
 }
 
+@media only screen and (min-width: 768px) {
+  .adress{
+    
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .adress {
+  display: flex;
+  gap: 40px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .adress {
+    display: none;
+  }
+}
 
 .adress-mail-end {
   margin-right: 0;
@@ -303,12 +350,27 @@ gap: 40px;
 
 
 .adress-mail {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
   color: var(--main-txt-cl);
   transition: color var(--anim);
 }
+
+@media only screen and (max-width: 768px) {
+  .adress-mail{
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .adress-mail {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+}
+
+
 
 .adress-mail:hover{
   color: #404bbf;
@@ -316,7 +378,6 @@ gap: 40px;
 .adress-mail:focus{
   color: #404bbf;
 }
-
 
 /**
   |============================
@@ -1269,25 +1330,32 @@ outline-color: var(--accent-txt-cl);
 */
 
 .menu-toggle {
-  min-height: 40px;
-  min-width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
-  border-radius: 50%;
-  outline: none;
+/* display: flex;
+align-items: center;
+justify-content: center;
+    top: 24px;
+    right: 24px;
+    margin-left: auto;
+    width: 24px;
+    height: 24px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #E7E9FC;
+    border: 1px solid #2E2F42;
+   opacity: 0.1;
+  
+    transition: background-color var(--anim), fill var(--anim); */
 }
-
+ 
 @media (min-width: 768px) {
   .menu-toggle {
     display: none;
   }
+}
+
+.menu-burger-icon {
+  stroke: var(--light-txt-cl);
 }
 
 .menu-toggle:hover,
@@ -1299,10 +1367,14 @@ outline-color: var(--accent-txt-cl);
   position: fixed;
   top: 0;
   left: 0;
+
+  display: flex;
+  flex-direction: column;
+
   width: 100vw;
   height: 100vh;
   padding: 32px;
-  background-color: #3f51b5;
+  background-color:#FFFFFF;
   z-index: 999;
 
   transform: translateX(100%);
@@ -1317,18 +1389,80 @@ outline-color: var(--accent-txt-cl);
   position: absolute;
   top: 16px;
   right: 16px;
-  color: #fff;
+  color: #FFFFFF;
 }
 
 .mobile-menu {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+padding-left: 0;
+margin: 0;
+list-style: none;
+
+  margin-bottom: auto;
+
+  font-weight: 700;
+  font-size: 36px;
+  letter-spacing: 0.02em;
+  line-height: 1.11px;
 }
 
 .mobile-menu .link {
   display: block;
-  padding: 10px;
-  color: #fff;
+  padding: 40px;
+  color: var(--background);
   text-decoration: none;
+}
+
+.mobile-menu .link :hover{
+  color: var(--navi-focus-cl);
+}
+.mobile-menu .link :focus {
+  color: var(--navi-focus-cl); 
+}
+
+.link:hover{
+  color: var(--navi-focus-cl);
+}
+.link:focus {
+  color: var(--navi-focus-cl);
+}
+
+.mobile-socials-list {
+  display: flex;
+  gap: 56px;
+}
+
+.mobile-contacts {
+  margin-bottom: 48px;
+}
+
+
+.mobile { 
+color: var(--mail-txt-cl);
+display: block;
+font-weight: 700;
+font-size: 36px;
+line-height: 1.11;
+padding-bottom: 40px;
+}
+
+.mobile:hover {
+color: var(--accent-txt-cl);
+}
+
+.mobile:focus {
+  color: var(--accent-txt-cl);
+}
+
+.mail {
+font-weight: 500;
+font-size: 20px;
+line-height: 1.2;
+color: var(--mail-txt-cl);
+}
+
+.mail:hover {
+  color: var(--accent-txt-cl);
+}
+.mail:focus {
+  color: var(--accent-txt-cl);
 }
