@@ -96,6 +96,8 @@ p {
 
 .img{
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 .visually-hidden {
   position: absolute;
@@ -119,7 +121,7 @@ svg {
   padding-bottom: 120px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 1157px) {
   .section{
   padding-top: 96px;
   padding-bottom: 96px;
@@ -168,8 +170,8 @@ min-width: 320px;
 max-width: 428px;
 margin-left: auto;
 margin-right: auto;
-padding-left: 16px;
-padding-right: 16px;
+padding-left: 15px;
+padding-right: 15px;
 
 outline: 2px solid salmon;
 outline-offset: -2px;
@@ -182,7 +184,7 @@ outline-offset: -2px;
 */
 @media only screen and (min-width: 768px) {
   .container {
-max-width: 738px;
+max-width: 768px;
   }
 }
 
@@ -340,13 +342,13 @@ background-color: var(--navi-focus-cl);
 .adress {
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 767px) {
   .adress{
     
   }
 }
 
-@media only screen and (min-width: 1158px) {
+@media only screen and (min-width: 1157px) {
   .adress {
   display: flex;
   gap: 40px;
@@ -405,12 +407,15 @@ background-color: var(--background);
 background-position: center;
 background-size: cover;
 background-repeat: no-repeat;
-background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/section1/people-office.jpg);
+background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/section1/hero_des@1x.jpg);
 margin-left: auto;
 margin-right: auto;
 }
 
-@media only screen and (max-width: 767px) {
+
+
+
+@media only screen and (max-width: 768px) {
    .hero{
   max-width: 767px;
   max-height: 432px;
@@ -419,7 +424,7 @@ margin-right: auto;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 767px) {
    .hero{
   max-width: 768px;
   max-height: 436px;
@@ -450,7 +455,7 @@ margin-right: auto;
 
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
    .hero-title{
 max-width: 320px;
 font-weight: 700;
@@ -460,7 +465,7 @@ margin-bottom: 72px;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 767px) {
   .hero-title {
  margin-bottom: 36px;
   }
@@ -673,7 +678,7 @@ color: var(--main-txt-cl);
 
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
    .team-list {
 display: flex;
 gap: 72px;
@@ -681,7 +686,7 @@ flex-wrap: wrap;
 justify-content: center;}
 }
 
-@media only screen and (max-width: 1157px) {
+@media only screen and (max-width: 1158px) {
   .team-list {
     display: flex;
     gap: 24px;
@@ -784,7 +789,7 @@ margin-bottom: 8px;
 
 }
 
-@media only screen and (max-width: 428px) {
+@media only screen and (max-width: 768px) {
   .social-container{
   margin-bottom: 72px;
   }
@@ -822,6 +827,12 @@ margin-bottom: 72px;
   gap: 72px 16px;
 }
 
+@media only screen and (max-width: 427px) {
+  .customers-list{
+    justify-content: center;
+  }
+}
+
 @media only screen and (min-width: 768px) {
    .customers-list{
     gap: 72px 24px;
@@ -851,6 +862,12 @@ flex-direction: column-reverse;
 @media only screen and (max-width: 768px) {
   .customers-item {
     width: 190px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .customers-item {
+    width: 168px;
   }
 }
 
@@ -896,9 +913,10 @@ fill: currentColor;
   background-color: var(--background);
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 1157px) {
   .footer{
     padding: 96px 0;
+    
   }
 }
 
@@ -985,7 +1003,7 @@ color: #FFFFFF;
  ;
 }
 
-@media only screen and (max-width: 428px) {
+@media only screen and (max-width: 768px) {
   .footer-email-input{
     width: 100%;
     margin-bottom: 16px;
@@ -1030,7 +1048,7 @@ letter-spacing: 0.04em;
 gap: 16px;
 }
 
-@media only screen and (max-width: 428px) {
+@media only screen and (max-width: 768px) {
   .subskribe-btn{
     margin: auto;
   }
@@ -1054,7 +1072,7 @@ fill: #FFFFFF;
   gap: 16px;
 }
 
-@media only screen and (max-width: 428px) {
+@media only screen and (max-width: 768px) {
   .socials-list{
     justify-content: center;
   }
@@ -1066,38 +1084,37 @@ fill: #FFFFFF;
   |============================
 */
 
-
-
 .footer-container {
-display: flex;
-align-items: baseline;
+  /* display: flex;
+  flex-wrap: wrap;
+  flex-direction: column; */
+
 }
  
-
 @media only screen and (max-width: 768px) {
+  .footer-container{
+   display: block;
+   text-align: center;
+   padding: 0 16px;
+ }
+}
+
+@media only screen and (min-width: 768px) {
   .footer-container{
     display: flex;
     flex-wrap: wrap;
     gap: 72px 24px;
     padding-left: 78px;
   
-  
   }
 }
 
-@media only screen and (max-width: 767px) {
-   .footer-container{
-    display: block;
-    text-align: center;
-    padding: 0 16px;
-  }
-}
 
 .email-input {
   margin-bottom: 16px;
 }
 
-@media only screen and (max-width: 428px) {
+@media only screen and (max-width: 768px) {
   .email-input{
     margin-bottom: 16px;
   }
@@ -1131,12 +1148,21 @@ transition: background-color var(--anim);
 .footer-logo {
 }
 
-@media only screen and (min-width: 768px) {
-   .footer-logo{
-    width: 264px;
-    
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .footer-logo{
+  margin: auto;
+  margin-bottom: 72px;
+  width: 268px;
   }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .footer-logo{
+  width: 264px;
+  }
+}
+
+
 @media only screen and (min-width: 1158px) {
    .footer-logo{
   margin-right: 120px;
@@ -1144,12 +1170,6 @@ transition: background-color var(--anim);
   }
 }
 
-@media only screen and (max-width: 428px) {
-   .footer-logo{
-   margin: auto;
-   margin-bottom: 72px;
-  }
-}
 
 
 
@@ -1395,7 +1415,7 @@ transition: transform var(--anim);
 }
 
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
 .modal{
 width: 392px;
   }
