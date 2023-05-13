@@ -1188,7 +1188,7 @@ transition: background-color var(--anim);
   width: 268px; */
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .footer-logo{
   margin: auto;
   margin-bottom: 72px;
@@ -1196,7 +1196,7 @@ transition: background-color var(--anim);
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .footer-logo{
   width: 264px;
   }
