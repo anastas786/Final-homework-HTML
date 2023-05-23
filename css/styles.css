@@ -338,6 +338,10 @@ background-color: var(--navi-focus-cl);
 }
 
 .adress {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+justify-content: flex-end;
 }
 
 @media only screen and (min-width: 768px) {
@@ -362,17 +366,27 @@ background-color: var(--navi-focus-cl);
   margin-right: 0;
 }
 
+.adress-item {
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1157.9px) {
+  .adress-item{
+
+  }
+}
 
 .adress-mail {
   color: var(--main-txt-cl);
   transition: color var(--anim);
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 768px) and (max-width: 1157.9px) {
   .adress-mail{
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
+
   }
 }
 
@@ -603,7 +617,7 @@ background-color: #F4F4FD;
   color: var(--light-txt-cl);
 }
 
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 1157.9px) {
    .benefits-title{
   font-weight: 700;
   font-size: 36px;
@@ -635,7 +649,7 @@ font-family: var(--primary-font);
 color: var(--main-txt-cl);
 }
 
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 1157.9px) {
    .benefits-text{
     font-weight: 500;
   }
@@ -734,7 +748,7 @@ justify-content: center;}
 @media only screen and (min-width: 768px) {
   .team-list {
     display: flex;
-    gap: 24px;
+    gap: 64px 24px;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -1471,7 +1485,10 @@ transition: transform var(--anim);
 
 @media only screen and (max-width: 767.9px) {
 .modal{
-width: 392px;
+max-width: 392px;
+width: 100%;
+width: calc(100% - 36px);
+
   }
 }
 
@@ -1748,7 +1765,7 @@ transition: background-color var(--anim), fill var(--anim);
 
   width: 100vw;
   height: 100vh;
-  padding: 32px;
+  padding: 40px;
   background-color:#FFFFFF;
   z-index: 999;
 
@@ -1777,14 +1794,14 @@ list-style: none;
   font-weight: 700;
   font-size: 36px;
   letter-spacing: 0.02em;
-  line-height: 1.11px;
+  line-height: 1.11;
 }
 
 
 .mobile-link {
   display: block;
-  padding: 40px;
-  color: var(--background);
+  padding-top: 40px;
+  color: var(--light-txt-cl);
   text-decoration: none;
 }
 
@@ -1794,20 +1811,23 @@ list-style: none;
 
 .mobile-socials-list {
   display: flex;
-  gap: 56px;
+  justify-content: space-around;
 }
 
 .mobile-contacts {
   margin-bottom: 48px;
 }
 
+.mobile-item {
+  margin-bottom: 40px;
+}
+
 .mobile { 
-color: var(--mail-txt-cl);
+color: var(--background-btn);
 display: block;
 font-weight: 700;
 font-size: 36px;
 line-height: 1.11;
-padding-bottom: 40px;
 }
 
 .mobile:hover {
