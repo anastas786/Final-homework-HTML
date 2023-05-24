@@ -471,7 +471,7 @@ margin-right: auto;
   max-width: 768px;
   max-height: 436px;
   padding-top: 112px;
-  padding-bottom: 112px;
+  padding-bottom: 80px;
   }
 }
 
@@ -506,6 +506,14 @@ line-height: 1.11;
 margin-bottom: 72px;
   }
 }
+
+@media only screen and (min-width: 768px) {
+  .hero-title {
+ margin-bottom: 36px;
+  }
+}
+
+
 
 @media only screen and (min-width: 768px) {
   .hero-title {
@@ -1496,6 +1504,7 @@ width: calc(100% - 36px);
 transform: translate(-50%, -50%) rotate(0) scale(1);
 opacity: 1;
 }
+
 .modal-button{
 
 position: absolute;
@@ -1512,18 +1521,18 @@ cursor: pointer;
 background: #E7E9FC;
 border: 1px solid rgba(0, 0, 0, 0.1);
 
-transition: background-color var(--anim), fill var(--anim);
+transition: background-color var(--anim), color var(--anim);
 }
 
 
 .modal-button:hover{
 background-color: var(--navi-focus-cl);
-fill: #FFFFFF;
+color: #FFFFFF;
 }
 
 .modal-button:focus {
   background-color: var(--navi-focus-cl);
-  fill: #FFFFFF;
+  color: #FFFFFF;
 }
 
 .modal-icon {
@@ -1785,22 +1794,24 @@ transition: background-color var(--anim), fill var(--anim);
 }
 
 .mobile-menu {
+display: flex; 
+flex-direction: column;
+gap: 40px;
 padding-left: 0;
 margin: 0;
 list-style: none;
 
-  margin-bottom: auto;
+margin-bottom: auto;
 
-  font-weight: 700;
-  font-size: 36px;
-  letter-spacing: 0.02em;
-  line-height: 1.11;
+font-weight: 700;
+font-size: 36px;
+letter-spacing: 0.02em;
+line-height: 1.11;
 }
 
 
 .mobile-link {
-  display: block;
-  padding-top: 40px;
+  
   color: var(--light-txt-cl);
   text-decoration: none;
 }
@@ -1811,15 +1822,20 @@ list-style: none;
 
 .mobile-socials-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  gap: calc((100% - 4 * 40px) / 3);
 }
 
 .mobile-contacts {
-  margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 40px;
+
 }
 
 .mobile-item {
-  margin-bottom: 40px;
+
 }
 
 .mobile { 
@@ -1828,6 +1844,12 @@ display: block;
 font-weight: 700;
 font-size: 36px;
 line-height: 1.11;
+}
+
+@media only screen and (max-width: 427px) {
+  .mobile{
+    font-size: 24px;
+  }
 }
 
 .mobile:hover {
